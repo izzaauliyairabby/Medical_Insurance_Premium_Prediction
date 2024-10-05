@@ -1,6 +1,6 @@
 # MLT Proyek Pertama | Medical Insurance Premium Prediction
 
-###### Disusun oleh : Niko Febrianur
+###### Disusun oleh : Izza Auliyai Rabby
 
 Ini adalah proyek pertama analisis prediktif untuk memenuhi submission Dicoding Kelas Machine Learning Terapan. 
 
@@ -10,141 +10,129 @@ Proyek ini membangun model *machine learning* yang dapat memprediksi biaya perta
 
 ### Latar Belakang
 
-Domain proyek "Medical Insurance Premium Prediction" adalah industri asuransi kesehatan. Asuransi kesehatan adalah sektor yang penting dalam industri asuransi, yang melibatkan perlindungan finansial terhadap risiko kesehatan bagi individu dan keluarga mereka. 
+Proyek "Medical Insurance Premium Prediction" berfokus pada industri asuransi kesehatan, yang menyediakan perlindungan finansial terhadap risiko kesehatan bagi individu dan keluarga. Dalam industri ini, perusahaan asuransi menawarkan layanan kesehatan dengan mengenakan premi kepada pemegang polis.
 
-Dalam domain ini, perusahaan asuransi menyediakan layanan perlindungan kesehatan dengan mengenakan premi kepada pemegang polis.
+Relevansi proyek ini dalam konteks asuransi kesehatan adalah:
 
-Relevansi proyek ini dengan industri asuransi kesehatan adalah sebagai berikut:
+Penentuan Premi yang Lebih Akurat: Model prediktif yang dikembangkan bertujuan membantu perusahaan asuransi dalam menetapkan premi berdasarkan risiko spesifik pemegang polis, seperti usia, riwayat penyakit, riwayat keluarga, serta kondisi fisik seperti tinggi dan berat badan. Dengan pendekatan ini, premi lebih mencerminkan tingkat risiko individual.
 
-1. Penentuan Premi yang Akurat: Model prediktif yang dikembangkan dalam proyek ini bertujuan untuk membantu perusahaan asuransi menentukan premi asuransi kesehatan yang akurat. Dengan mempertimbangkan faktor-faktor risiko yang relevan, seperti usia, riwayat penyakit kronis, riwayat keluarga terkait kanker, operasi besar yang pernah dijalani, serta informasi fisik seperti tinggi dan berat badan, model ini dapat memberikan estimasi premi yang lebih tepat berdasarkan risiko individual yang dihadapi oleh calon pemegang polis.
+Keadilan dalam Penetapan Premi: Model ini memastikan premi yang dikenakan lebih adil karena memperhitungkan faktor risiko secara komprehensif. Premi yang dihasilkan sesuai dengan tingkat risiko kesehatan, sehingga setiap pemegang polis membayar sesuai dengan risiko yang mereka hadapi.
 
-2. Keadilan dalam Penentuan Premi: Model prediktif ini juga bertujuan untuk memberikan perkiraan premi yang lebih adil dan akurat bagi calon pemegang polis. Dengan mempertimbangkan faktor-faktor risiko yang relevan secara komprehensif, model ini dapat mengurangi ketidaksetaraan dalam penetapan premi. Ini berarti bahwa premi yang dibayarkan oleh calon pemegang polis akan lebih sesuai dengan risiko kesehatan yang mereka tanggung, memberikan keadilan dalam penentuan premi asuransi kesehatan.
+Manfaat Bagi Perusahaan Asuransi:
 
-Manfaat bagi Perusahaan Asuransi:
-- Penentuan Premi yang Akurat: Dengan menggunakan model prediktif ini, perusahaan asuransi dapat menentukan premi asuransi kesehatan yang lebih akurat berdasarkan risiko individual calon pemegang polis. Hal ini dapat membantu perusahaan mengelola risiko keuangan dan mencegah kerugian yang tidak diharapkan.
-- Peningkatan Efisiensi: Dengan memanfaatkan teknologi dan analisis data dalam menentukan premi, perusahaan asuransi dapat meningkatkan efisiensi dalam proses penentuan premi, menghemat waktu dan sumber daya yang dibutuhkan.
+Penentuan Premi Lebih Tepat: Model ini membantu perusahaan menetapkan premi secara lebih akurat, sehingga risiko finansial lebih terkendali.
+Peningkatan Efisiensi: Dengan menggunakan teknologi analitik, perusahaan dapat mempercepat proses penentuan premi dan mengurangi penggunaan sumber daya.
+Manfaat Bagi Calon Pemegang Polis:
 
-Manfaat bagi Calon Pemegang Polis:
-- Premi yang Adil: Dengan menggunakan model prediktif yang mempertimbangkan faktor-faktor risiko secara komprehensif, calon pemegang polis akan menerima perkiraan premi yang lebih adil, yang sejalan dengan risiko kesehatan yang mereka tanggung. Hal ini dapat membantu mereka memahami dan menerima besaran premi yang mereka bayar.
-- Perlindungan Finansial yang Optimal: Dengan premi yang didasarkan pada risiko individual, calon pemegang polis akan mendapatkan perlindungan finansial yang sesuai dengan kebutuhan dan risiko kesehatan mereka. Ini memberikan mereka kepastian dan keamanan dalam menghadapi risiko kesehatan yang mungkin mereka alami.
-
-Secara keseluruhan, model analisis prediktif dalam proyek "Medical Insurance Premium Prediction" dapat memberikan manfaat yang signifikan bagi perusahaan asuransi dan calon pemegang polis. 
-
-Dengan menggunakan model ini, perusahaan asuransi dapat mengoptimalkan penentuan premi dan mengelola risiko keuangan mereka, sementara calon pemegang polis akan mendapatkan perkiraan premi yang lebih adil dan akurat sesuai dengan risiko kesehatan mereka.
+Premi yang Lebih Adil: Premi dihitung berdasarkan risiko individu, yang memberikan pemahaman lebih jelas dan rasa keadilan bagi calon pemegang polis.
+Perlindungan Finansial yang Tepat: Dengan premi yang sesuai dengan kebutuhan dan risiko kesehatan, pemegang polis mendapatkan perlindungan finansial yang lebih optimal.
+Secara keseluruhan, proyek ini menawarkan solusi win-win: perusahaan asuransi dapat mengoptimalkan penentuan premi dan mengurangi risiko keuangan, sementara pemegang polis menerima premi yang lebih sesuai dengan profil risiko mereka.
 
 ## 2. Business Understanding
 
-Proyek ini dibangun untuk perusahaan asuransi kesehatan dengan karakteristik bisnis sebagai berikut:
+Proyek ini dirancang untuk perusahaan asuransi kesehatan dengan karakteristik bisnis sebagai berikut:
 
-1. Perusahaan Asuransi Kesehatan yang Berorientasi pada Analisis Data: Perusahaan ini memiliki kepentingan dan komitmen dalam mengoptimalkan penggunaan data untuk meningkatkan keputusan bisnis. Mereka mengakui nilai analisis prediktif dan *machine learning* dalam menentukan premi asuransi kesehatan yang akurat dan berdasarkan risiko individual.
+Perusahaan Asuransi Kesehatan Berbasis Analitik: Perusahaan ini memiliki fokus kuat pada penggunaan data untuk pengambilan keputusan yang lebih baik. Mereka memahami pentingnya analitik prediktif dan machine learning dalam menentukan premi asuransi kesehatan yang lebih tepat dan didasarkan pada risiko individual pelanggan.
 
-2. Perusahaan dengan Basis Data Pelanggan yang Kaya: Perusahaan ini memiliki akses dan kepemilikan data pelanggan yang lengkap dan kaya akan informasi. Data tersebut mencakup variabel seperti usia, riwayat medis, operasi sebelumnya, alergi, riwayat penyakit keluarga, serta data fisik seperti tinggi dan berat badan. Data pelanggan yang kaya ini akan menjadi sumber informasi yang berharga dalam mengembangkan model prediktif.
+Perusahaan dengan Data Pelanggan yang Luas: Perusahaan ini memiliki akses ke data pelanggan yang lengkap dan rinci. Informasi yang dimiliki mencakup variabel seperti usia, riwayat kesehatan, operasi sebelumnya, riwayat keluarga, serta data fisik seperti tinggi dan berat badan. Data yang kaya ini akan digunakan untuk membangun model prediktif yang kuat.
 
-3. Perusahaan yang Berfokus pada Keunggulan Kompetitif: Perusahaan ini mengutamakan keunggulan kompetitif di pasar asuransi kesehatan. Mereka ingin memanfaatkan teknik analisis prediktif dan *machine learning* untuk meningkatkan proses penetapan premi, memberikan perkiraan premi yang lebih akurat, serta menawarkan produk asuransi yang lebih menarik dan kompetitif bagi calon pemegang polis.
+Perusahaan yang Berfokus pada Keunggulan Kompetitif: Perusahaan ini berorientasi untuk tetap unggul di pasar asuransi kesehatan dengan memanfaatkan teknik analitik prediktif dan machine learning guna mengoptimalkan proses penetapan premi. Dengan demikian, mereka dapat menawarkan produk asuransi yang lebih kompetitif kepada calon pelanggan.
 
-Dengan memahami karakteristik bisnis perusahaan asuransi kesehatan ini, proyek ini dapat dirancang dan disesuaikan untuk memenuhi kebutuhan dan tujuan bisnis yang spesifik.
+Dengan memperhatikan karakteristik perusahaan ini, proyek "Medical Insurance Premium Prediction" disesuaikan untuk membantu perusahaan mencapai tujuan bisnis mereka, dengan cara-cara berikut:
 
-Oleh sebab itu, proyek "Medical Insurance Premium Prediction" ini dapat membantu perusahaan asuransi kesehatan dengan karakteristik bisnis di atas dalam meningkatkan keputusan bisnis dan mencapai keunggulan kompetitif sebagai berikut:
+Premi yang Lebih Tepat: Model prediktif yang dikembangkan dalam proyek ini akan memungkinkan perusahaan menentukan premi yang lebih akurat berdasarkan berbagai faktor risiko, seperti usia, riwayat medis, operasi sebelumnya, riwayat keluarga, dan kondisi fisik lainnya. Estimasi premi yang lebih tepat ini membantu perusahaan membuat keputusan berbasis data yang lebih informatif, sekaligus meminimalkan potensi risiko finansial.
 
-1. Penentuan Premi yang Lebih Akurat: Dengan menggunakan model analisis prediktif yang dikembangkan dalam proyek ini, perusahaan dapat menentukan premi asuransi kesehatan yang lebih akurat berdasarkan faktor-faktor risiko yang relevan. Dengan mempertimbangkan variabel seperti usia, riwayat medis, operasi sebelumnya, riwayat penyakit keluarga, dan data fisik lainnya, model ini dapat memberikan estimasi premi yang lebih tepat dan konsisten. Hal ini membantu perusahaan mengambil keputusan yang lebih informasional dan meminimalkan risiko keuangan yang tidak terduga.
+Meningkatkan Efisiensi dan Produktivitas: Dengan penerapan analitik prediktif dan machine learning, perusahaan dapat meningkatkan efisiensi dalam menetapkan premi. Proses ini akan mengotomatisasi pemrosesan data dan menghasilkan perkiraan premi secara lebih cepat, mengurangi ketergantungan pada metode manual yang memakan waktu. Ini akan menghemat sumber daya perusahaan dan memungkinkan mereka lebih fokus pada aspek penting bisnis lainnya.
 
-2. Peningkatan Efisiensi dan Produktivitas: Dengan memanfaatkan teknologi analisis prediktif dan *machine learning*, perusahaan dapat meningkatkan efisiensi dan produktivitas dalam proses penetapan premi. Model prediktif dapat secara otomatis memproses data dan memberikan perkiraan premi yang lebih cepat, mengurangi waktu dan upaya yang dibutuhkan dalam proses manual yang lebih lambat dan rentan terhadap kesalahan. Ini memungkinkan perusahaan untuk lebih fokus pada kegiatan inti bisnis mereka dan meningkatkan produktivitas keseluruhan.
+Pengambilan Keputusan yang Lebih Baik: Model prediktif akan memberikan wawasan lebih mendalam tentang faktor-faktor risiko yang memengaruhi premi asuransi kesehatan. Dengan wawasan ini, perusahaan dapat lebih memahami pelanggan mereka, mengidentifikasi tren, dan membuat keputusan strategis yang lebih baik. Ini juga membantu mereka menyusun strategi yang lebih efektif untuk memperkuat posisi mereka di pasar.
 
-3. Pengambilan Keputusan yang Lebih Informasional: Dengan menggunakan model analisis prediktif yang akurat, perusahaan dapat mengambil keputusan bisnis yang lebih informasional dan cerdas. Model ini memberikan wawasan yang lebih dalam tentang faktor-faktor risiko yang mempengaruhi premi asuransi kesehatan, membantu perusahaan memahami pelanggan mereka dengan lebih baik, dan mengidentifikasi pola atau tren yang relevan. Informasi ini memungkinkan perusahaan untuk mengoptimalkan strategi bisnis mereka, meningkatkan layanan kepada pelanggan, dan mengidentifikasi peluang baru di pasar asuransi kesehatan.
+Keunggulan Kompetitif di Pasar: Dengan model analitik prediktif yang lebih akurat, perusahaan dapat menarik lebih banyak calon pemegang polis dengan menawarkan premi yang lebih adil dan produk yang lebih kompetitif. Hal ini akan membantu perusahaan membedakan diri dari pesaing, memperbesar pangsa pasar, dan membangun hubungan jangka panjang yang kuat dengan pelanggan.
 
-4. Keunggulan Kompetitif dalam Pasar: Dengan menggunakan model analisis prediktif yang lebih canggih dan akurat, perusahaan asuransi kesehatan dapat mencapai keunggulan kompetitif di pasar. Dengan memperkirakan premi dengan lebih tepat dan memberikan estimasi yang lebih adil, perusahaan dapat menarik calon pemegang polis dengan produk asuransi yang lebih menarik dan kompetitif. Hal ini membantu perusahaan membedakan diri dari pesaing, memperluas pangsa pasar, dan membangun hubungan jangka panjang dengan pelanggan.
-
-Dengan memanfaatkan model prediktif yang dikembangkan dalam proyek ini, perusahaan asuransi kesehatan dapat mengambil keputusan bisnis yang lebih baik, meningkatkan efisiensi operasional, mencapai keunggulan kompetitif, dan memberikan layanan yang lebih baik kepada calon pemegang polis.
+Melalui implementasi model prediktif ini, perusahaan asuransi kesehatan dapat membuat keputusan yang lebih cerdas, meningkatkan efisiensi, memperoleh keunggulan di pasar, serta memberikan layanan yang lebih baik kepada calon pemegang polis.
 
 ## 3. Problem Statements
 
-- Apa langkah yang dapat diambil untuk meningkatkan akurasi dalam menentukan premi asuransi kesehatan?
+Langkah-langkah yang dapat diambil untuk meningkatkan akurasi dalam menentukan premi asuransi kesehatan meliputi:
 
-Perusahaan asuransi menghadapi tantangan dalam menentukan premi yang akurat dan adil bagi calon pemegang polis. Hal ini disebabkan oleh keterbatasan dalam memahami faktor-faktor yang mempengaruhi besaran premi. 
+Penggunaan Data yang Lebih Luas dan Kaya: Mengumpulkan dan menggunakan data yang lebih lengkap seperti riwayat medis, kondisi fisik, riwayat keluarga, serta faktor lingkungan akan membantu dalam menghasilkan perkiraan premi yang lebih akurat.
 
-Dalam proyek ini, kami akan mengatasi masalah ini dengan mengembangkan model analisis prediktif yang dapat memperkirakan premi asuransi kesehatan dengan tingkat akurasi yang lebih tinggi.
+Penerapan Teknik Machine Learning yang Canggih: Memanfaatkan algoritma machine learning yang lebih canggih, seperti regresi, pohon keputusan, atau jaringan saraf, memungkinkan model mempelajari pola kompleks dari data dan memberikan perkiraan yang lebih tepat.
 
-- Bagaimana caranya untuk meningkatkan transparansi dalam penetapan premi asuransi kesehatan?
+Analisis Faktor Risiko yang Mendetail: Dengan menganalisis secara komprehensif faktor risiko seperti usia, riwayat penyakit, dan kondisi medis, model dapat lebih akurat memperhitungkan risiko kesehatan individu dan menetapkan premi yang sesuai.
 
-Calon pemegang polis seringkali merasa bahwa penetapan premi asuransi kesehatan dilakukan secara tidak adil atau tidak transparan. Mereka tidak memahami faktor-faktor apa yang menjadi dasar penentuan premi.
+Pengujian dan Validasi Model: Menguji dan memvalidasi model secara berkala dengan data aktual akan membantu dalam menyesuaikan prediksi agar tetap relevan dan akurat seiring dengan perubahan kondisi kesehatan dan pasar.
 
-Dalam proyek ini, kami akan mencoba meningkatkan transparansi dengan mengidentifikasi faktor-faktor yang paling signifikan dalam menentukan premi asuransi kesehatan, sehingga calon pemegang polis dapat memahami alasan di balik besaran premi yang mereka terima.
+Risiko Keuangan Bagi Perusahaan Asuransi:
+Masalah: Jika premi ditetapkan secara tidak akurat, ada potensi ketidakseimbangan antara risiko yang dihadapi perusahaan dan premi yang diterima. Premi yang terlalu rendah untuk kelompok berisiko tinggi dapat menyebabkan klaim yang melebihi pendapatan, memicu kerugian finansial.
 
-- Bagaimana risiko keuangan yang terkait dengan penentuan premi yang tidak akurat dapat dikurangi?
-  
-Penentuan premi yang tidak akurat dapat menyebabkan risiko keuangan bagi perusahaan asuransi. Jika premi yang ditetapkan terlalu rendah, perusahaan dapat menghadapi kerugian finansial jika terjadi klaim yang tinggi. 
+Contoh: Jika perusahaan menetapkan premi yang rendah untuk individu dengan risiko kesehatan tinggi, misalnya yang memiliki riwayat penyakit kronis, mereka mungkin menghadapi lebih banyak klaim dari yang diprediksi, yang dapat menyebabkan kerugian besar.
 
-Di sisi lain, premi yang terlalu tinggi dapat mengurangi daya tarik produk asuransi. Dalam proyek ini, kami akan membantu mengurangi risiko keuangan dengan memperkirakan premi yang lebih akurat berdasarkan faktor-faktor risiko yang relevan.
+Dalam proyek "Medical Insurance Premium Prediction", faktor-faktor risiko ini akan dianalisis secara menyeluruh dan dimasukkan ke dalam model prediktif. Dengan memanfaatkan machine learning, model akan menghasilkan perkiraan premi yang lebih akurat dengan mempertimbangkan variabel-variabel penting yang relevan.
 
-Dalam konteks penentuan premi asuransi kesehatan, berikut adalah contoh konkret dari faktor-faktor spesifik yang seringkali menyebabkan masalah-masalah yang disebutkan sebelumnya:
-
-1. Kurangnya akurasi dalam menentukan premi asuransi kesehatan:
-   - Masalah: Kurangnya pemahaman tentang faktor-faktor risiko yang berkontribusi pada biaya asuransi kesehatan, seperti riwayat medis, usia, jenis kelamin, gaya hidup, atau kondisi kesehatan tertentu.
-   - Contoh: Seorang calon pemegang polis yang memiliki riwayat keluarga dengan penyakit jantung mungkin dikenakan premi yang tidak akurat karena tidak adanya pemahaman yang cukup tentang hubungan antara faktor ini dengan risiko kesehatan seseorang.
-
-2. Kurangnya transparansi dalam penetapan premi:
-   - Masalah: Ketidaktahuan calon pemegang polis mengenai faktor-faktor yang digunakan oleh perusahaan asuransi dalam menentukan premi asuransi kesehatan.
-   - Contoh: Seorang calon pemegang polis mungkin tidak mengetahui bahwa faktor seperti indeks massa tubuh (BMI), kebiasaan merokok, atau sejarah perawatan medis sebelumnya berdampak signifikan pada besaran premi yang diberikan.
-
-3. Risiko keuangan bagi perusahaan asuransi:
-   - Masalah: Penentuan premi yang tidak akurat dapat menyebabkan ketidakseimbangan antara risiko yang ditanggung oleh perusahaan dan premi yang diterima.
-   - Contoh: Jika perusahaan asuransi menetapkan premi yang terlalu rendah untuk kelompok tertentu yang memiliki risiko tinggi, mereka dapat menghadapi klaim yang melebihi pendapatan premi, mengakibatkan kerugian finansial.
-
-Dalam proyek "Medical Insurance Premium Prediction", faktor-faktor ini akan dianalisis secara komprehensif dan dimasukkan ke dalam model analisis prediktif. 
-
-Dengan memanfaatkan teknik *machine learning*, model ini akan menghasilkan perkiraan premi yang lebih akurat, mempertimbangkan faktor-faktor risiko yang relevan dengan tingkat keakuratan yang lebih tinggi.
-
-Selain itu, dengan mengidentifikasi faktor-faktor yang paling signifikan dalam penetapan premi, perusahaan asuransi dapat memberikan penjelasan yang lebih baik kepada calon pemegang polis mengenai alasan di balik besaran premi yang mereka terima, meningkatkan transparansi dan kepercayaan.
+Selain itu, dengan mengidentifikasi faktor-faktor yang paling berpengaruh dalam penentuan premi, perusahaan asuransi dapat memberikan penjelasan yang lebih transparan kepada calon pemegang polis tentang alasan di balik besaran premi mereka. Ini akan meningkatkan transparansi dan kepercayaan pemegang polis.
 
 ## 4. Goals
 
-Proyek ini memiliki tujuan sebagai berikut:
+Proyek ini memiliki tiga tujuan utama yang berfokus pada peningkatan akurasi prediksi premi, transparansi dalam penetapan premi, serta pengurangan risiko keuangan bagi perusahaan asuransi kesehatan. Metrik evaluasi yang sesuai digunakan untuk mengukur pencapaian setiap tujuan.
 
-1. Mengembangkan model analisis prediktif: Tujuan utama proyek ini adalah mengembangkan model analisis prediktif yang dapat memperkirakan premi asuransi kesehatan dengan tingkat akurasi yang lebih tinggi. Dengan melakukan analisis data yang komprehensif dan menggunakan teknik *machine learning*, tujuannya adalah menciptakan model yang dapat memberikan perkiraan premi yang lebih tepat berdasarkan faktor-faktor risiko yang relevan.
-
-2. Meningkatkan transparansi: Proyek ini bertujuan untuk meningkatkan transparansi dalam penetapan premi asuransi kesehatan. Dengan mengidentifikasi faktor-faktor yang paling signifikan dalam menentukan premi, tujuannya adalah memberikan pemahaman yang lebih baik kepada calon pemegang polis mengenai alasan di balik besaran premi yang mereka terima. Hal ini akan membantu membangun kepercayaan dan kepuasan calon pemegang polis terhadap perusahaan asuransi.
-
-3. Mengurangi risiko keuangan: Salah satu tujuan proyek ini adalah membantu perusahaan asuransi mengurangi risiko keuangan yang terkait dengan penetapan premi yang tidak akurat. Dengan memperkirakan premi dengan lebih akurat berdasarkan faktor-faktor risiko yang relevan, perusahaan asuransi dapat mengoptimalkan pengelolaan risiko keuangan mereka, menghindari kerugian yang tidak diharapkan, dan menjaga stabilitas keuangan perusahaan.
-
-Metrik evaluasi yang digunakan untuk mengukur keberhasilan mencapai setiap tujuan dapat meliputi:
-
-- Akurasi prediksi: Metrik ini digunakan untuk mengukur sejauh mana model analisis prediktif dapat memperkirakan premi asuransi kesehatan dengan tepat. Nilai akurasi yang tinggi menunjukkan bahwa model memberikan perkiraan yang lebih akurat, sehingga membantu mencapai tujuan pertama.
-
-- Tingkat transparansi: Metrik ini dapat diukur dengan melakukan survei atau penilaian terhadap calon pemegang polis untuk mengukur tingkat pemahaman mereka tentang alasan di balik besarnya premi yang mereka terima. Semakin tinggi tingkat pemahaman dan kepercayaan calon pemegang polis terhadap alasan penetapan premi, semakin tinggi pula tingkat transparansi yang dicapai.
-
-- Risiko keuangan: Metrik ini dapat diukur dengan membandingkan kinerja keuangan perusahaan asuransi sebelum dan setelah penerapan model analisis prediktif. Jika risiko keuangan berkurang setelah menggunakan model, hal ini menunjukkan bahwa tujuan ketiga tercapai.
-
-Selain itu, metrik lain yang dapat digunakan untuk mengukur keberhasilan proyek ini adalah ialah *Mean Squared Error* (*MSE*): Metrik ini dapat digunakan untuk mengukur seberapa dekat prediksi premi dengan nilai sebenarnya. Semakin rendah nilai *MSE*, semakin baik model analisis prediktif dalam memperkirakan premi.
-
-Penggunaan metrik evaluasi yang tepat dan relevan dengan tujuan proyek akan membantu dalam menilai keberhasilan dan dampak proyek terhadap perusahaan asuransi dan calon pemegang polis.
+1. Mengembangkan Model Analisis Prediktif
+Tujuan: Menghasilkan model prediktif yang dapat memperkirakan premi asuransi kesehatan dengan lebih akurat menggunakan teknik machine learning.
+Metrik Evaluasi:
+Akurasi Prediksi: Mengukur kemampuan model dalam memperkirakan premi dengan tepat. Akurasi yang lebih tinggi menandakan model tersebut efektif.
+Mean Squared Error (MSE): Nilai MSE yang lebih rendah menunjukkan bahwa prediksi premi semakin dekat dengan nilai premi yang sebenarnya, mengindikasikan keberhasilan model dalam memperkirakan premi dengan tepat.
+2. Meningkatkan Transparansi
+Tujuan: Memberikan pemahaman yang lebih baik kepada calon pemegang polis mengenai faktor-faktor yang mempengaruhi penetapan premi, untuk membangun kepercayaan dan kepuasan pelanggan.
+Metrik Evaluasi:
+Tingkat Transparansi: Dapat diukur melalui survei atau wawancara dengan calon pemegang polis, untuk mengetahui sejauh mana mereka memahami alasan di balik besarnya premi yang mereka terima.
+Tingkat Kepuasan: Survei kepuasan calon pemegang polis dapat digunakan untuk mengukur apakah peningkatan transparansi berhasil meningkatkan kepercayaan dan kepuasan pelanggan terhadap perusahaan.
+3. Mengurangi Risiko Keuangan
+Tujuan: Membantu perusahaan asuransi mengurangi risiko keuangan yang terkait dengan penetapan premi yang tidak akurat, menjaga stabilitas keuangan perusahaan.
+Metrik Evaluasi:
+Penurunan Klaim Berlebih: Membandingkan jumlah klaim asuransi sebelum dan setelah penerapan model prediktif. Penurunan klaim yang tidak sesuai dengan premi menandakan pengurangan risiko keuangan.
+Performa Keuangan: Analisis kinerja keuangan perusahaan, seperti stabilitas laba dan pengelolaan risiko, dapat menunjukkan apakah perusahaan berhasil mengurangi risiko keuangan akibat premi yang tidak akurat.
+Tambahan:
+Tingkat Optimasi Proses: Dapat diukur melalui peningkatan efisiensi dalam proses penetapan premi yang lebih cepat dan otomatis dengan menggunakan model prediktif berbasis data.
+Keberlanjutan Penggunaan Model: Mengukur sejauh mana perusahaan mengadopsi model dalam operasi sehari-hari dan seberapa baik model dapat diintegrasikan dengan sistem yang ada.
+Dengan menggunakan metrik evaluasi yang relevan seperti akurasi prediksi, tingkat transparansi, dan pengurangan risiko keuangan, keberhasilan proyek ini dapat dinilai secara menyeluruh dan memberikan dampak yang signifikan bagi perusahaan asuransi dan calon pemegang polis.
 
 ## 5. Solution statements
 
-Solusi yang diberikan untuk proyek ini melibatkan beberapa tahapan dan algoritma yang digunakan. Berikut adalah penjelasan yang lebih rinci mengenai solusi yang diberikan:
+Solusi untuk proyek prediksi premi asuransi kesehatan melibatkan beberapa tahapan strategis dan penggunaan algoritma machine learning yang dirancang untuk meningkatkan akurasi dan efisiensi. Berikut adalah rincian solusi yang diberikan:
 
-1. Eksplorasi Data (Exploratory Data Analysis - EDA):
-   - Sebelum melatih model, proses EDA akan dilakukan untuk memahami karakteristik data yang ada. EDA akan membantu dalam mengidentifikasi pola, melihat hubungan antar variabel, dan menemukan wawasan yang berguna dalam memprediksi premi asuransi kesehatan.
+1. Eksplorasi Data (Exploratory Data Analysis - EDA)
+Tujuan: Memahami data secara mendalam sebelum model dilatih.
+Langkah-langkah:
+Menganalisis distribusi variabel seperti usia, jenis kelamin, kondisi kesehatan, gaya hidup, dan biaya historis klaim asuransi.
+Melihat pola hubungan antara variabel-variabel kunci, seperti korelasi antara usia atau status merokok dengan premi.
+Identifikasi dan penanganan outliers, data yang hilang, serta variabel-variabel yang mungkin sangat mempengaruhi prediksi.
+Output: Wawasan yang akan memandu pemilihan fitur yang relevan dan teknik pra-pemrosesan data yang tepat.
+2. Algoritma yang Digunakan
+Support Vector Regression (SVR):
+Kegunaan: Digunakan untuk memprediksi premi berdasarkan variabel-variabel yang relevan. SVR cocok untuk menangani data non-linear dengan menerapkan kernel yang tepat, seperti radial basis function (RBF).
+Kelebihan: Memiliki kemampuan yang kuat untuk menemukan hubungan yang kompleks antara variabel-variabel prediktor dan premi, serta menangani data dengan distribusi yang tidak normal.
+Huber Regressor:
+Kegunaan: Algoritma regresi yang tangguh terhadap outliers, menjaga kestabilan prediksi meskipun ada data yang ekstrem.
+Kelebihan: Menggabungkan kekuatan regresi linier dan ketahanan terhadap data yang mengandung noise, menghasilkan model yang lebih stabil dalam lingkungan data yang tidak sempurna.
+3. Penggunaan Library PyCaret
+Mengapa PyCaret?: PyCaret adalah library yang memfasilitasi proses pembangunan model machine learning dengan sangat cepat dan efisien, bahkan bagi proyek-proyek besar.
+Fitur PyCaret:
+Memungkinkan automated machine learning (AutoML) untuk membandingkan berbagai algoritma sekaligus.
+Menyediakan berbagai algoritma regression, termasuk SVR, Huber Regressor, serta banyak opsi lain yang dapat dieksplorasi.
+Dilengkapi dengan proses hyperparameter tuning untuk meningkatkan kinerja model lebih lanjut.
+Hasil yang Diharapkan: Dengan menggunakan PyCaret, proses pemilihan algoritma yang optimal dapat dilakukan lebih cepat dengan hasil yang lebih akurat.
+4. Evaluasi dengan Metrik MSE (Mean Squared Error)
+MSE sebagai metrik utama untuk mengukur akurasi model.
+Alasan Penggunaan MSE:
+Menghitung rata-rata kuadrat selisih antara nilai yang diprediksi dan nilai aktual, memberikan indikasi seberapa jauh prediksi dari target sebenarnya.
+Metrik ini menekankan kesalahan yang besar, sehingga model yang optimal adalah yang mampu meminimalkan kesalahan besar dalam prediksi premi.
+Tujuan: Menghasilkan model dengan MSE yang rendah, menandakan akurasi prediksi yang tinggi.
+Kesimpulan
+Melalui pendekatan yang komprehensif, dari eksplorasi data hingga evaluasi model menggunakan metrik yang tepat, solusi ini diharapkan dapat:
 
-2. Algoritma *SVR* (Support Vector Regression) dan *Huber Regressor*:
-   - Algoritma *SVR* dan *Huber Regressor* dipilih sebagai algoritma *machine learning* yang akan digunakan dalam proyek ini.
-   - *SVR* adalah algoritma yang digunakan untuk memodelkan dan memprediksi data regresi. Dalam proyek ini, *SVR* akan digunakan untuk memprediksi premi asuransi kesehatan berdasarkan faktor-faktor risiko yang relevan.
-   - *Huber Regressor* adalah algoritma regresi yang robust terhadap *outlier*s. Ini adalah salah satu metode yang efektif dalam menangani data yang memiliki noise atau pencilan (*outlier*s). *Huber Regressor* dapat memberikan hasil prediksi yang lebih stabil dan tahan terhadap gangguan dari data yang ekstrem.
-
-3. Penggunaan *Library* PyCaret:
-   - *Library* PyCaret akan digunakan untuk menentukan algoritma *machine learning* yang optimal untuk proyek ini.
-   - PyCaret menyediakan berbagai algoritma *machine learning* yang siap pakai dan memfasilitasi proses pemilihan algoritma yang terbaik berdasarkan data dan tujuan proyek.
-   - Dengan menggunakan PyCaret, proses pemilihan algoritma dapat dilakukan dengan lebih efisien dan cepat.
-
-4. Evaluasi dengan Metrik *MSE* (Mean Squared Error):
-   - Metrik *MSE* (Mean Squared Error) akan digunakan untuk melakukan evaluasi pembanding antara model-model yang dikembangkan.
-   - *MSE* adalah metrik yang umum digunakan dalam masalah regresi untuk mengukur sejauh mana selisih antara nilai prediksi dan nilai sebenarnya.
-   - Dengan menggunakan metrik *MSE*, kita dapat mengukur tingkat keakuratan model dalam memprediksi premi asuransi kesehatan.
-
-Proses pemilihan algoritma lain dalam *library* PyCaret melibatkan eksperimen dan evaluasi berdasarkan kinerja model menggunakan metrik evaluasi yang relevan, seperti *MSE*. 
-
-PyCaret menyediakan fungsionalitas yang memungkinkan untuk membandingkan kinerja berbagai algoritma dengan cepat dan memilih algoritma yang memberikan hasil terbaik.
-
-Melalui pendekatan ini, diharapkan solusi yang diberikan dapat memenuhi tujuan proyek dalam mengembangkan model analisis prediktif yang akurat dan efektif untuk memprediksi premi asuransi kesehatan.
+Menghasilkan model prediktif yang mampu memperkirakan premi asuransi kesehatan secara akurat.
+Meningkatkan transparansi dalam penentuan premi dengan mengidentifikasi faktor-faktor risiko yang paling signifikan.
+Mengurangi risiko keuangan bagi perusahaan asuransi dengan menetapkan premi yang lebih tepat dan efisien.
+Pemanfaatan PyCaret dan algoritma yang tepat seperti SVR dan Huber Regressor memastikan proses ini dapat diotomatisasi dan dioptimalkan, membawa hasil yang signifikan bagi perusahaan asuransi dan calon pemegang polis.
 
 ## 6. Data Understanding
 
@@ -214,11 +202,45 @@ Visualisasi Boxplot:
 ![outliers_boxplot](https://github.com/nikofebrianur/Machine-Learning-Terapan/assets/42314371/994b7ef1-fe6d-4bc4-94a5-5800322fe11f)
 ###### Gambar 6.1 Visualisasi outliers menggunakan boxplot
 
-Dengan menggunakan metode IQR dan visualisasi boxplot, kita dapat mengidentifikasi dan mengatasi outlier dalam data. Outlier dapat menjadi nilai yang ekstrem dan tidak biasa yang dapat mempengaruhi hasil analisis statistik dan model prediksi. 
+Dengan menggunakan metode IQR (Interquartile Range) dan visualisasi boxplot, kita dapat mengidentifikasi outlier dalam data dengan lebih akurat. Outlier adalah data yang jauh dari nilai-nilai lain dalam dataset dan bisa memberikan pengaruh yang tidak diinginkan pada model analisis dan prediksi.
 
-Dengan memperhatikan IQR dan melihat visualisasi boxplot, kita dapat menentukan batas atas dan batas bawah untuk outlier, serta mengambil tindakan yang tepat, seperti menghapus atau mengelola outlier tersebut, agar tidak mempengaruhi hasil analisis secara signifikan.
+Langkah-langkah Menggunakan IQR untuk Mengidentifikasi Outlier:
+Hitung IQR:
 
-Kemudian untuk menganalisa sebaran dataset, kita dapat menggunakan histogram. Histogram adalah visualisasi grafis yang digunakan untuk menampilkan distribusi frekuensi dari suatu variabel dalam bentuk interval atau bin.
+IQR adalah selisih antara Q3 (Kuartil Ketiga) dan Q1 (Kuartil Pertama), yaitu 25% data teratas dan 25% data terbawah.
+Rumusnya:
+𝐼
+𝑄
+𝑅
+=
+𝑄
+3
+−
+𝑄
+1
+IQR=Q3−Q1
+Tentukan Batas Atas dan Bawah untuk Outlier:
+
+Batas Bawah: Q1 - 1.5 * IQR
+Batas Atas: Q3 + 1.5 * IQR
+Data yang berada di luar batas bawah atau atas ini dianggap sebagai outlier.
+Visualisasi Boxplot:
+
+Boxplot adalah grafik yang menunjukkan distribusi data berdasarkan kuartil. Ini memudahkan kita untuk mengidentifikasi outlier yang ditampilkan sebagai titik di luar batas-batas whisker dari boxplot.
+Pada boxplot, kita dapat dengan cepat melihat distribusi, median, dan juga apakah ada pencilan yang perlu diperhatikan.
+Menangani Outlier:
+Setelah mengidentifikasi outlier, kita dapat memilih salah satu dari beberapa tindakan:
+
+Menghapus Outlier: Jika outlier merupakan data yang keliru atau tidak sesuai dengan konteks analisis, kita dapat menghapusnya.
+Mengelola Outlier: Jika outlier penting untuk analisis (misalnya pada kasus medis atau keuangan), kita dapat mempertimbangkan untuk meredam pengaruhnya dengan teknik seperti robust scaling atau mengganti nilai outlier dengan rata-rata atau median.
+Analisis Sebaran Dataset dengan Histogram:
+Histogram adalah alat visualisasi yang digunakan untuk melihat distribusi frekuensi dari suatu variabel.
+Histogram menampilkan seberapa sering nilai tertentu muncul dalam data, dengan nilai variabel di sepanjang sumbu x dan frekuensi munculnya nilai tersebut di sumbu y.
+Interval/Bin: Histogram dibagi menjadi interval atau bin, dan tinggi setiap bin menunjukkan jumlah data yang jatuh ke dalam rentang tersebut.
+Histogram berguna untuk:
+Melihat apakah distribusi data bersifat normal, miring ke kiri/kanan, atau multimodal.
+Memahami pola distribusi secara keseluruhan, termasuk potensi keberadaan outlier.
+Dengan menggunakan IQR, boxplot, dan histogram, kita dapat mengidentifikasi outlier dan memahami distribusi dataset secara lebih baik, memastikan bahwa analisis statistik dan model prediksi lebih akurat serta tidak terganggu oleh data yang ekstrem.
 
 Berikut adalah langkah-langkah untuk menganalisa sebaran dataset menggunakan histogram:
 
@@ -289,23 +311,33 @@ Rasio ini merupakan aturan praktis umum yang memberikan keseimbangan antara memi
 Namun, rasio ini dapat bervariasi tergantung pada karakteristik dataset dan kebutuhan proyek tertentu.
 
 ## 8. Modeling
-Dalam proses modeling, proyek ini akan menggunakan algoritma *SVR* dan algoritma *Huber Regressor* berdasarkan hasil dari data *library* pycaret.
+Dalam proyek ini, penggunaan algoritma SVR (Support Vector Regression) dan Huber Regressor diharapkan dapat memberikan solusi yang efektif untuk memprediksi premi asuransi kesehatan. Kedua algoritma ini dipilih karena kekuatannya dalam menangani data regresi, terutama yang rentan terhadap outliers atau noise.
 
-Algoritma *SVR* (Support Vector Regression) dan *Huber Regressor* adalah dua algoritma yang umum digunakan dalam masalah regresi. Kedua algoritma ini digunakan dalam proyek ini untuk memprediksi premi asuransi kesehatan berdasarkan faktor-faktor risiko yang relevan. Berikut adalah penjelasan mengenai konsep dan cara kerja keduanya:
+Berikut adalah penjelasan lebih rinci tentang keduanya:
 
-*Support Vector Regression* (SVR):
-   - Konsep: *SVR* adalah variasi *dari Support Vector Machines* (SVM) yang digunakan dalam masalah regresi. Tujuan utama SVR adalah untuk menemukan fungsi regresi yang paling baik yang meminimalkan kesalahan prediksi pada data training dengan tetap mempertahankan margin maksimum.
-   - Cara Kerja: *SVR* bekerja dengan mencari hyperplane (bidang) yang dapat memisahkan data training dengan margin maksimum. *Hyperplane* ini berfungsi sebagai fungsi regresi yang memprediksi nilai target berdasarkan fitur-fitur input. Dalam *SVR*, titik-titik data yang berada di luar margin maksimum tetap diperbolehkan, sehingga mengakomodasi adanya pencilan (outliers). *SVR* mengoptimalkan margin dengan menyeimbangkan kesalahan prediksi dan kompleksitas model.
-   - Kelebihan: *SVR* efektif dalam menangani masalah regresi dengan data yang memiliki noise atau pencilan (outliers). Algoritma ini juga memiliki fleksibilitas dalam memilih fungsi kernel yang sesuai untuk memodelkan hubungan non-linear antara fitur input dan target.
-
-*Huber Regressor*:
-   - Konsep: *Huber Regressor* adalah algoritma regresi yang robust terhadap *outliers*. Algoritma ini menggabungkan metode *Least Squares* (LS) dan *Least Absolute Deviations* (LAD) dengan menggunakan fungsi kerugian *Huber*.
-   - Cara Kerja: *Huber Regressor* menghitung residual atau selisih antara nilai prediksi dan nilai sebenarnya. Jika residual lebih kecil dari suatu ambang batas, *Huber Regressor* menggunakan fungsi kerugian Least Squares (LS) yang merupakan kuadrat dari residual. Namun, jika residual lebih besar dari ambang batas, fungsi kerugian yang digunakan adalah fungsi kerugian Least Absolute Deviations (LAD) yang merupakan nilai absolut dari residual. Dengan demikian, *Huber Regressor* memberikan penekanan yang lebih besar pada ketahanan terhadap pencilan dibandingkan dengan metode Least Squares.
-   - Kelebihan: *Huber Regressor* efektif dalam menangani data yang memiliki pencilan yang signifikan. Dibandingkan dengan metode Least Squares, *Huber Regressor* memiliki performa yang lebih baik ketika terdapat pencilan yang signifikan dalam data. Algoritma ini memungkinkan penyesuaian yang lebih baik terhadap karakteristik data yang berbeda.
-
-Dalam proyek ini, kedua algoritma tersebut digunakan untuk memodelkan hubungan antara faktor-faktor risiko yang relevan dengan premi asuransi kesehatan. 
-
-Dengan menggunakan konsep dan cara kerja yang telah dijelaskan, algoritma *SVR* dan *Huber Regressor* dapat menghasilkan prediksi premi yang lebih akurat dan tahan terhadap pencilan (outliers) dalam data.
+1. Support Vector Regression (SVR):
+Konsep: SVR merupakan adaptasi dari Support Vector Machines (SVM) yang digunakan untuk tugas regresi. Fokus SVR adalah memprediksi variabel target dengan meminimalkan kesalahan prediksi, sambil memaksimalkan margin yang diizinkan. Algoritma ini berusaha untuk menemukan sebuah hyperplane yang memprediksi nilai target dengan toleransi tertentu.
+Cara Kerja: Dalam SVR, model akan mencoba untuk memasukkan sebanyak mungkin titik data ke dalam margin, dan hanya mempertimbangkan titik data yang melampaui margin tersebut (disebut sebagai support vectors). Fungsi kernel dalam SVR memberikan fleksibilitas untuk menangani hubungan non-linear antara fitur-fitur input dan output dengan cara mentransformasikan data ke dimensi yang lebih tinggi.
+Keuntungan:
+SVR sangat fleksibel dalam memilih kernel (linear, polynomial, RBF) untuk mengatasi masalah non-linear.
+Algoritma ini bekerja baik dengan data yang memiliki outliers moderat karena hanya memperhitungkan support vectors yang berada di luar margin.
+SVR dapat memberikan model yang kuat untuk memprediksi hubungan kompleks dengan menggunakan kernel yang sesuai.
+2. Huber Regressor:
+Konsep: Huber Regressor adalah algoritma regresi robust yang menggabungkan kelebihan metode Least Squares dan Least Absolute Deviations. Fungsi kerugian Huber linear terhadap outliers yang signifikan, sehingga membuat model ini lebih tahan terhadap outliers daripada metode Least Squares konvensional.
+Cara Kerja: Huber Regressor menghitung residual antara prediksi dan nilai sebenarnya. Jika residual lebih kecil dari nilai ambang batas tertentu (threshold), Huber menggunakan metode Least Squares, tetapi jika residual lebih besar dari threshold, algoritma menggunakan metode Least Absolute Deviations untuk meminimalkan efek outliers. Dengan cara ini, Huber Regressor mampu menyesuaikan dengan data yang memiliki outliers besar tanpa terganggu oleh outliers tersebut.
+Keuntungan:
+Huber Regressor sangat baik dalam mengatasi dataset yang memiliki outliers yang signifikan.
+Algoritma ini menjaga keseimbangan antara ketahanan terhadap outliers dan presisi pada data yang tidak mengandung outliers.
+Algoritma ini dapat memberikan performa yang stabil dalam kondisi data yang bervariasi.
+Keuntungan Menggabungkan Kedua Algoritma:
+SVR memberikan solusi yang baik untuk memodelkan data dengan hubungan non-linear dan noise moderat, sementara Huber Regressor sangat efektif dalam menangani outliers ekstrem tanpa kehilangan ketepatan prediksi pada data yang tidak mengandung outliers.
+Penggunaan kedua algoritma ini memberikan fleksibilitas yang lebih besar dalam menghadapi karakteristik data yang berbeda. Dengan mengeksplorasi kekuatan masing-masing algoritma, proyek ini dapat menghasilkan prediksi yang lebih akurat dan robust terhadap variasi dan anomali dalam dataset.
+Evaluasi dan Optimalisasi:
+Dengan menggunakan PyCaret, model SVR dan Huber Regressor dapat dioptimalkan lebih lanjut melalui penyesuaian hyperparameter dan perbandingan kinerja dengan algoritma regresi lainnya.
+PyCaret memungkinkan proses tuning hyperparameter seperti kernel type untuk SVR atau alpha dan epsilon pada Huber Regressor sehingga hasil prediksi premi asuransi bisa lebih akurat.
+Setelah model dilatih, evaluasi akan dilakukan menggunakan metrik Mean Squared Error (MSE) yang memberikan indikasi seberapa baik prediksi model mendekati nilai sebenarnya.
+Kesimpulan:
+Menggunakan kombinasi algoritma SVR dan Huber Regressor untuk prediksi premi asuransi kesehatan adalah pendekatan yang sangat sesuai. Kedua algoritma ini dipilih karena kemampuannya menangani data yang mengandung noise dan outliers, serta fleksibilitas dalam memodelkan hubungan yang rumit antara variabel risiko dan premi. Pendekatan ini diharapkan mampu menghasilkan model prediksi yang akurat dan robust, memastikan hasil yang lebih dapat diandalkan untuk keputusan bisnis di industri asuransi.
 
 ### Tahapan yang dilakukan
 Berikut adalah urutan tahapan yang dilakukan dalam proses modeling:
@@ -410,30 +442,35 @@ Oleh karena itu, model *Huber* dapat dianggap lebih optimal dalam proyek ini unt
 
 ## 10. Kesimpulan 
 
-Proyek ini berhasil mengembangkan model analisis prediktif menggunakan model *Huber* yang mampu memperkirakan premi asuransi kesehatan dengan tingkat akurasi yang lebih tinggi dibandingkan dengan model *SVR*. 
-
-Hasil evaluasi menunjukkan bahwa model *Huber* memberikan *MSE* yang lebih rendah pada data training dan test set, serta evaluasi score yang lebih baik pada data testing. 
-
-Hal ini menunjukkan bahwa model *Huber* dapat memberikan prediksi premi yang lebih akurat dan bermanfaat bagi perusahaan asuransi dan calon pemegang polis.
+Proyek ini berhasil membuktikan bahwa model Huber Regressor memiliki keunggulan dalam memprediksi premi asuransi kesehatan dengan akurasi yang lebih tinggi dibandingkan SVR. Evaluasi menunjukkan bahwa model Huber menghasilkan Mean Squared Error (MSE) yang lebih rendah di kedua set data (training dan testing), menunjukkan prediksi yang lebih presisi serta performa yang lebih stabil. Dengan hasil ini, model Huber dapat memberikan berbagai manfaat, baik bagi perusahaan asuransi maupun calon pemegang polis.
 
 Manfaat bagi Perusahaan Asuransi:
-- Penentuan premi yang lebih akurat: Model *Huber* dapat membantu perusahaan asuransi menentukan premi asuransi kesehatan dengan tingkat akurasi yang lebih tinggi, mengurangi risiko keuangan dan meningkatkan efisiensi dalam pengelolaan risiko.
+Penentuan Premi yang Lebih Akurat:
 
-- Transparansi yang ditingkatkan: Dengan memahami faktor-faktor yang signifikan dalam penetapan premi, perusahaan asuransi dapat memberikan penjelasan yang lebih baik kepada calon pemegang polis mengenai alasan di balik besaran premi yang mereka terima, meningkatkan transparansi dan kepercayaan.
+Dengan menggunakan model Huber, perusahaan dapat menetapkan premi yang lebih akurat berdasarkan faktor risiko individu, mengurangi ketidakpastian dan meminimalkan risiko kerugian finansial akibat salah perhitungan.
+Akurasi yang lebih tinggi juga membantu dalam pengelolaan risiko, karena premi yang ditetapkan lebih sesuai dengan profil risiko masing-masing pemegang polis.
+Transparansi yang Ditingkatkan:
 
+Model ini memberikan kemampuan bagi perusahaan untuk menjelaskan dengan lebih detail faktor-faktor yang mempengaruhi premi. Pemahaman yang lebih baik dari pihak perusahaan meningkatkan transparansi, yang pada akhirnya dapat meningkatkan kepercayaan antara perusahaan dan nasabah.
 Manfaat bagi Calon Pemegang Polis:
-- Premi yang adil dan akurat: Model *Huber* dapat memberikan prediksi premi yang lebih adil dan akurat berdasarkan faktor-faktor risiko yang relevan, memastikan bahwa premi yang dibayarkan sejalan dengan risiko yang ditanggung oleh calon pemegang polis.
+Premi yang Adil dan Akurat:
 
-- Pemahaman yang lebih baik: Dengan penjelasan yang lebih jelas mengenai faktor-faktor yang mempengaruhi penetapan premi, calon pemegang polis dapat memiliki pemahaman yang lebih baik tentang alasan di balik besaran premi yang mereka terima.
+Calon pemegang polis akan mendapatkan premi yang lebih adil karena penetapan didasarkan pada perhitungan yang lebih tepat dan mempertimbangkan faktor risiko yang relevan, sehingga mereka hanya membayar premi yang sesuai dengan risiko yang ditanggung.
+Pemahaman yang Lebih Baik tentang Premi:
 
+Dengan adanya transparansi yang lebih baik, calon pemegang polis dapat lebih memahami alasan di balik penetapan premi mereka, memberikan rasa keadilan yang lebih besar dan meningkatkan pengalaman mereka sebagai nasabah.
 Langkah Tindak Lanjut:
-- Implementasi model: Model *Huber* yang telah dikembangkan dapat diimplementasikan oleh perusahaan asuransi dalam proses penetapan premi asuransi kesehatan mereka.
+Implementasi Model:
 
-- Peningkatan data dan pemeliharaan model: Perusahaan asuransi dapat terus memperkaya data yang digunakan dalam model dan mempertahankan model dengan melakukan pemeliharaan dan pembaruan secara berkala.
+Perusahaan asuransi dapat langsung menerapkan model Huber yang dikembangkan ini ke dalam sistem penetapan premi mereka. Ini akan memberikan manfaat langsung dalam penentuan premi yang lebih tepat.
+Peningkatan Data dan Pemeliharaan Model:
 
-- Evaluasi dan peningkatan: Perusahaan asuransi dapat terus mengevaluasi kinerja model dan melakukan perbaikan atau pengembangan lebih lanjut untuk meningkatkan keakuratan dan efektivitas prediksi premi.
+Perusahaan perlu terus memperkaya dataset mereka dengan data baru agar model tetap relevan dan akurat. Model Huber perlu dipelihara secara berkala, baik dari segi pelatihan ulang model maupun pembaruan data.
+Evaluasi dan Peningkatan:
 
-Dengan mengambil langkah-langkah tindak lanjut ini, perusahaan asuransi dapat memanfaatkan model analisis prediktif ini untuk meningkatkan ketepatan penetapan premi, meningkatkan transparansi, dan memberikan manfaat yang lebih baik bagi calon pemegang polis dalam pengalaman asuransi kesehatan mereka.
+Seiring berjalannya waktu, perusahaan dapat terus mengevaluasi performa model di dunia nyata dan melakukan optimasi lebih lanjut untuk meningkatkan akurasi dan kemampuan model, serta menyesuaikannya dengan perubahan tren risiko yang terjadi.
+Kesimpulan:
+Dengan mengimplementasikan model Huber Regressor, perusahaan asuransi dapat meningkatkan akurasi penetapan premi asuransi kesehatan, memberikan manfaat yang nyata bagi calon pemegang polis, serta memperkuat transparansi dan efisiensi dalam operasi bisnis mereka. Evaluasi dan perbaikan berkelanjutan pada model akan memastikan keberlanjutan manfaat ini di masa mendatang.
 
 ## References: 
 Chauluka M, Uzochukwu B, and Chinkhumba J, "Factors Associated With Coverage of Health Insurance Among Women in Malawi," *Frontiers in Health Services*, vol.2, 2022.

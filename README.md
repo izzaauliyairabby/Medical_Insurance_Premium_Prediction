@@ -1,4 +1,4 @@
-# MLT Proyek Pertama | Medical Insurance Premium Prediction
+# Medical Insurance Premium Prediction Analytics
 
 ###### Disusun oleh : Izza Auliyai Rabby
 
